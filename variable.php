@@ -7,6 +7,19 @@
   <title>Document</title>
 </head>
 <body>
+<?php
 
+  $number = 5;
+  $cname = "WebyRoot Private Limited";
+  $fname = "Shadab Ahmad";
+  $fyear = 2021;
+
+
+  echo "<p> We have <b>$number</b> member in our <b>$cname</b> and it's founded by <b>$fname</b> in $fyear</p>";
+
+  echo $number ." ". $fyear;
+?>
+
+<h1>Hello Shadab</h1>
 </body>
 </html>
