@@ -5,12 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    p {
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
 <?php
 
   $number = 5;
-  $cname = "WebyRoot Private Limited";
+  $cname = "<h3>WebyRoot Private Limited</h3>";
   $fname = "Shadab Ahmad";
   $fyear = 2021;
 
