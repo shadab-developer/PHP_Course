@@ -23,6 +23,20 @@
     echo "<p> Hi , I'm $numberList1[0] and I'm $numberList1[1] year old. I founded one IT Company and it's called $numberList1[2] </p>";
 
     print_r($numberList1);
+
+
+    $nameList= ["Shadab Ahmad"];
+    echo "<br>";
+    $numberList2= array(
+      28,
+      "65",
+      866,
+      "Shadab Ahmad",
+      87,
+      "<h1>Hello World</h1>"
+    );
+
+    print_r($numberList2);
 ?>
 
 
