@@ -19,6 +19,7 @@
 
 
 
+  //Associative Array
   $names = array(
     "Id" => 1,
     "FName" => "Shadab",
