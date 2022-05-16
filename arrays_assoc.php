@@ -15,7 +15,7 @@
   );
 
   //Normal Arry
-  echo $number[2] . "<br>";
+  // echo $number[2] . "<br>";
 
 
 
@@ -26,14 +26,31 @@
     "LName" => "Ahmad",
     "Id" => 2,
     "FName" => "Keshav",
-    "LName" => "Gupta"
+    "LName" => "Gupta",
+    "Id" => 3,
+    "FName" => "Vishal Kumar",
+    "LName" => "Singh"
   );
 
-  print_r($names);
+  $companyDetails = array(
+    "c_name" => "WebyRoot Private Limited",
+    "f_name" => "Shadab Ahmad",
+    "r_date" => "25 / Aug / 2021",
+    "c_name" => "Google India Private limited",
+    "f_name" => "Sundar Picshai",
+    "r_date" => "25 / Aug / 1999"
+  );
 
-  echo "<br>";
+  for($x = 0; $x <= count($companyDetails); $x++){
+    print_r ($companyDetails['c_name']);
+    echo "<br>";
+  }
 
-  echo $names['FName'];
+  // print_r($companyDetails);
+
+  // echo "<br>";
+
+  // echo $companyDetails["c_name"];
   ?>
 </body>
 </html>
