@@ -21,5 +21,6 @@
   <a href="variable.php">Variable in PHP</a>
   <a href="switch_statement.php">Switch Statament in PHP</a>
   <a href="while_loop.php">While Loop</a>
+  <a href="for_loop.php">For Loop</a>
 </body>
 </html>
