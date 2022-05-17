@@ -17,6 +17,12 @@
     Not Equal !=
     not Identicall !==
 
+    <h3>Logical Operaotrs</h3>
+
+    And &&
+    Or ||
+    Not !=
+
 </pre>
 <?php
 

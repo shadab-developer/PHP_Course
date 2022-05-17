@@ -19,5 +19,7 @@
   <a href="js.php">Js PHP</a>
   <a href="math.php">Math in PHP</a>
   <a href="variable.php">Variable in PHP</a>
+  <a href="switch_statement.php">Switch Statament in PHP</a>
+  <a href="while_loop.php">While Loop</a>
 </body>
 </html>
