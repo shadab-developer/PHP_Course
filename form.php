@@ -1,6 +1,24 @@
 <?php
 if(isset($_POST['submit'])){
-  echo "Its works";
+  $uname = $_POST['uname'];
+  $password = $_POST['password'];
+
+  // echo "Name : " . $name ."and Company Name : " . $company_name ;
+
+  if($uname == "shadabdeveloper" && $password == "pass@1234S") {
+    $smessage = "You are logged In";
+  }
+  elseif($uname != "shadabdeveloper"){
+    $emessage = "your username is incorrect";
+  }
+  elseif($password != "pass@1234S"){
+    $emessage = "your password is incorrect";
+  }
+  else {
+    echo "Invaild Account";
+  }
+
+
 
 }
 
@@ -15,13 +33,18 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 <form action="form.php" method="POST">
-  <label for="name">Name : </label>
-  <input type="text" name="name" placeholder="Enter Name"><br>
-  <label for="comapny_name">Company Name</label>
-  <input type="text" name="company_name" placeholder="Enter Company Name"><br>
+  <label for="uname">UserName : </label>
+  <input type="text" name="uname" placeholder="Enter UserName"><br>
+  <label for="password">Password</label>
+  <input type="password" name="password" placeholder="Enter Password"><br>
 
   <input type="submit" name="submit">
 </form>
+<?php
 
+if(isset($_POST['submit'])){
+  echo $emessage . $smessage ;
+}
+?>
 </body>
 </html>
