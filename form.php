@@ -30,6 +30,16 @@ if(isset($_POST['submit'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    .error_msg {
+      color: red;
+    }
+    .success_msg {
+      color: green;
+    }
+  </style>
+
 </head>
 <body>
 <form action="form.php" method="POST">
@@ -43,7 +53,9 @@ if(isset($_POST['submit'])){
 <?php
 
 if(isset($_POST['submit'])){
-  echo $emessage . $smessage ;
+
+  echo "<p class='error_msg'>$emessage</p>";
+  echo "<p class='success_msg'>$smessage</p>";
 }
 ?>
 </body>
