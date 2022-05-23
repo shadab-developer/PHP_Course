@@ -10,3 +10,5 @@
           echo $email . "<br>";
         }
 ?>
+
+<h1><a href="form_external.php">Go back</a></h1>
