@@ -1,27 +1,7 @@
 <?php
-$connection = mysqli_connect('localhosst', 'root', '', 'loginapp');
-if($connection) {
-   $successmsg = "you are connected with mysql";
+include 'config.php';
 
-}
-else {
-  $errormsg = "Database connection failed";
-}
-
-$username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $query = "INSERT INTO users(username , password)" . "VALUES ('$username', '$password')";
-
-
-  $result = mysqli_query($connection, $query);
-
-  if(!$result){
-    die('Query Faild' . 'mysqli_error()');
-  }
-
-
-
+include 'functions.php';
 
 ?>
 <!DOCTYPE html>
@@ -38,13 +18,23 @@ $username = $_POST['username'];
     .form-group {
       margin-top: 20px;
     }
+    ul {
+      margin-top: 20px;
+      display: flex;
+      justify-content : space-evenly;
+    }
+    ul > li {
+      list-style: none;
+    }
 
   </style>
 </head>
 <body>
 <div class="container">
 <div class="col-sm-8">
+  <?php include 'menu.html'; ?>
 <form action="" method="POST">
+  <h1 class="text-center">Create Account</h1>
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" name="username" class="form-control" >
@@ -56,26 +46,23 @@ $username = $_POST['username'];
   </div>
 
   <div class="form-group">
-    <input type="submit" class="btn btn-primary" name="submit">
+    <input type="submit" class="btn btn-primary" name="submit" value="CREATE">
   </div>
 
   <div class="form-group">
 
+
+
    <?php
-    if(isset($_POST['submit'])){
-    echo "<p class='alert alert-warning'>";
-         echo $errormsg;
-    }
-    echo "</p>";
+
+if(isset($_POST['submit'])){
+
+createUser();
+
+}
+
     ?>
 
-    <?php
-    if(isset($_POST['submit'])){
-    echo "<p class='alert alert-success'>";
-         echo $successmsg;
-    }
-    echo "</p>";
-    ?>
 
   </div>
 </form>
