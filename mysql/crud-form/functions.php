@@ -38,7 +38,35 @@ function createUser() {
 
 }
 
+//Display All Data
 
+function dashboardData() {
+  global $connection;
+  $query = 'SELECT * from users';
+
+$result = mysqli_query($connection , $query);
+
+if(!$result){
+  die('Something is wrong' . mysqli_error($connection));
+}
+
+
+while($row = mysqli_fetch_assoc($result)){
+
+        $id =$row['id'];
+        $username = $row['username'];
+        $password = $row['password'];
+        $rnumber = $row['rnumber'];
+
+        echo "<tr>";
+        echo "<td>" . $id . "</td>";
+        echo "<td>" . $username . "</td>";
+        echo "<td>" . $password . "</td>";
+         echo "<td>" . $rnumber . "</td>";
+        echo "<td><a href='edit.php'>Edit</a> <a href='delete.php'>Delete</a> </td>";
+        echo "</tr>";
+      }
+}
 // Show All User
 function showAllData() {
   global $connection;

@@ -1,13 +1,7 @@
 <?php
 include 'config.php';
 
-$query = 'SELECT * from users';
-
-$result = mysqli_query($connection , $query);
-
-if(!$result){
-  die('Something is wrong' . mysqli_error($connection));
-}
+include 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,26 +42,10 @@ if(!$result){
       </thead>
       <tbody>
 
+
       <?php
 
-      while($row = mysqli_fetch_assoc($result)){
-
-        $id =$row['id'];
-        $username = $row['username'];
-        $password = $row['password'];
-        $rnumber = $row['rnumber'];
-
-        echo "<tr>";
-        echo "<td>" . $id . "</td>";
-        echo "<td>" . $username . "</td>";
-        echo "<td>" . $password . "</td>";
-         echo "<td>" . $rnumber . "</td>";
-        echo "<td><a href='edit.php'>Edit</a></td>";
-        echo "</tr>";
-      }
-
-
-
+      dashboardData();
         ?>
       </tbody>
     </table>
