@@ -2,9 +2,7 @@
 
 $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 
-if(!$connection) {
+if (!$connection) {
 
   $errormsg = "Database connection failed";
-
 }
-
