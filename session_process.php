@@ -1,12 +1,14 @@
 <?php
 
-$name = "WBT";
-$vlaue = 200;
-$expiry = time() + (60 * 60 * 24 * 7);
+session_start();
 
-setcookie($name, $vlaue, $expiry);
+
+echo $_SESSION['msg'];
+
+
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,20 +20,6 @@ setcookie($name, $vlaue, $expiry);
 </head>
 
 <body>
-
-  <?php
-
-  if (isset($_COOKIE['WBT'])) {
-
-    echo $_COOKIE['WBT'];
-
-    echo "Cookie found";
-  } else {
-    echo "Cookie Not Found";
-  }
-
-
-  ?>
 
 </body>
 
